@@ -21,3 +21,8 @@ unsigned int AudioBuffer::getSampleRate() const
 	return sampleRate_;
 }
 
+double AudioBuffer::getDurationInSeconds() const
+{
+	return static_cast<double>(samples_.size()) / sampleRate_;
+}
+

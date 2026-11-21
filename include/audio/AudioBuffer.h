@@ -11,6 +11,7 @@ class AudioBuffer
 
 		std::size_t getSampleCount() const;
 		unsigned int getSampleRate() const;
+		double getDurationInSeconds() const;
 
 	private:
 		std::vector<float> samples_;
