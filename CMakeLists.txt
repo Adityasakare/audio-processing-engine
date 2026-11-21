@@ -25,7 +25,8 @@ target_compile_options(project_warnings
     	"$<$<CXX_COMPILER_ID:MSVC>:/W4>"
 )
 add_library(audio_core STATIC
-	src/AudioAnalyzer.cpp)
+	src/AudioAnalyzer.cpp
+	src/AudioBuffer.cpp)
 
 target_link_libraries(audio_core
 	PRIVATE project_warnings)
@@ -42,6 +43,7 @@ enable_testing()
 
 add_executable(audio_tests 
 	tests/AudioAnalyzerTest.cpp
+	tests/AudioBufferTest.cpp
 )
 
 target_compile_features(audio_tests PRIVATE cxx_std_17)
